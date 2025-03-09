@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+     /* background: url('') center/cover no-repeat; */ 
+     background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #ff6600;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Services */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+}
+
+.service-card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* How It Works */
+.how-it-works {
+    background: #ff6600;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.step {
+    max-width: 200px;
+}
+
+/* Testimonials */
+.testimonials {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.testimonial {
+    max-width: 400px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 20px 0;
+}
