@@ -7,9 +7,47 @@ body {
     padding: 0;
 }
 
+.rental-cards-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping to a new line */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 15px;
+    padding: 10px;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #783cda #f1f1f1;
+    white-space: nowrap; /* Keeps everything in a single row */
+}
+
+/* Custom scrollbar for WebKit (Chrome, Safari) */
+.rental-cards-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.rental-cards-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.rental-cards-container::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+}
+
+.rental-cards-container::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+.car-top {
+    text-align: center;
+}
+
+.travel-top {
+    text-align: center;
+}
 /* Hero Section */
 .hero {
-     /* background: url('') center/cover no-repeat; */ 
+     background-image: url("/assets/images/indigo.png");
      background-color: #222;
     color: white;
     text-align: center;
@@ -27,7 +65,7 @@ body {
 }
 
 .btn-primary {
-    background-color: #ff6600;
+    background-color: #783cda;
     border: none;
     padding: 12px 20px;
     font-size: 18px;
@@ -62,7 +100,7 @@ body {
 
 /* How It Works */
 .how-it-works {
-    background: #ff6600;
+    background: #f8741d;
     color: white;
     text-align: center;
     padding: 40px 20px;

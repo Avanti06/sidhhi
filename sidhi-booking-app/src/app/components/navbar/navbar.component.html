@@ -1,56 +1,51 @@
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <!-- Logo -->
-        <a class="navbar-brand" routerLink="/">
-            <img src="sidhhi.png" alt="Logo" class="img-fluid logo">
-        </a>
-
-        <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar Items -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" >Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" >Booking</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        Services
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" >Car Rental</a></li>
-                        <li><a class="dropdown-item" >Travel Rental</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <!-- Search Form -->
-            <form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
-
-            <!-- Login & Register Buttons -->
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="btn btn-login me-2">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-register">Register</a>
-                </li>
-            </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold" routerLink="/">Sidhhi rental</a>
+  
+      <!-- Mobile Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" routerLink="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/rentals">Rentals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/provider">Become a Host</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/About us">About us</a>
+          </li>
+        </ul>
+  
+        <!-- Authentication Buttons -->
+        <div class="ms-3">
+          <ng-container *ngIf="!isLoggedIn; else userMenu">
+            <a routerLink="/login" class="btn btn-primary me-2">Login</a>
+            <a routerLink="/register" class="btn btn-primary">Sign Up</a>
+          </ng-container>
+  
+          <!-- User Profile Dropdown -->
+          <ng-template #userMenu>
+            <div class="dropdown">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Profile
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/dashboard">Dashboard</a></li>
+                <li><a class="dropdown-item" (click)="isLoggedIn = false">Logout</a></li>
+              </ul>
+            </div>
+          </ng-template>
         </div>
+      </div>
     </div>
-</nav>
-
-    
+  </nav>
+  

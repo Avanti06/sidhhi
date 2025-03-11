@@ -1,11 +1,5 @@
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Find Your Perfect Ride</h1>
-        <p>Book cars & travels for your next adventure.</p>
-        <a href="#" class="btn btn-primary">Book Now</a>
-    </div>
-</section>
+<!-- hero-section -->
+<app-hero-section></app-hero-section>
 
 <!-- Services Section -->
 <section class="services">
@@ -18,11 +12,35 @@
         </div>
         <div class="service-card">
             <img src="travels1.jpeg" alt="Travel Booking">
-            <h3>Travel Booking</h3>
-            <p>Plan and book travels with ease.</p>
+            <h3>Travel rental</h3>
+            <p>Plan and book travels with us.</p>
+        </div>
+        <div class="service-card">
+            <img src="assets/images/truck.jpeg" alt="Travel Booking">
+            <h3>Trucks rental</h3>
+            <p>Plan and book truck with us.</p>
+        </div>
+        <div class="service-card">
+            <img src="assets/images/vans.jpeg" alt="Travel Booking">
+            <h3>Vans Renal</h3>
+            <p>Plan and book vans with us.</p>
         </div>
     </div>
 </section>
+
+
+<!-- featured rental car -->
+ <h3 class="car-top">Top Rated Car</h3>
+ <div class="rental-cards-container">
+    <app-featured-rental-card  *ngFor="let car of featuredRentals" [rental]="car"></app-featured-rental-card>
+ </div>
+
+ <!-- featured rental travel -->
+  <h3 class="travel-top">Top Rated Travels</h3>
+  <div class="rental-cards-container">
+    <app-featured-rental-travel  *ngFor="let travel of featuredRentalsTravel" [rental]="travel"></app-featured-rental-travel>
+ </div>
+
 
 <!-- How It Works -->
 <section class="how-it-works">
@@ -44,12 +62,17 @@
 </section>
 
 <!-- Testimonials -->
-<section class="testimonials">
+<!-- <section class="testimonials">
     <h2>What Our Customers Say</h2>
     <div class="testimonial">
         <p>"Amazing service! Smooth car booking and great support."</p>
         <h4>- Rahul Sharma</h4>
     </div>
-</section>
+</section> -->
+
+<div class="testimonials">
+    <h2>What Our Customer Says</h2>
+     <app-testimonials></app-testimonials>
+</div>
 
 
